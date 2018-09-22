@@ -9,14 +9,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@android:style/Theme.NoTitleBar">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowGifsActivity"></activity>
+        <activity
+            android:name=".ShowGifsActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <provider android:authorities="com.facebook.app.FacebookContentProvider{262104017746520}"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
     </application>
 </manifest>
